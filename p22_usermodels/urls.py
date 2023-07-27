@@ -1,7 +1,8 @@
-"""p22_usermodels URL Configuration
+"""
+URL configuration for project23 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.1/topics/http/urls/
+    https://docs.djangoproject.com/en/4.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -20,6 +21,11 @@ from django.conf.urls.static import static
 from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('registration/',registration,name='registration'),
+    path('registration/',registration,name='registration'),
+    path('home/',home,name='home'),
+    path('user_login/',user_login,name='user_login'),
+    path('user_logout/',user_logout,name='user_logout'),
+
+
 
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
